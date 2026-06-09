@@ -10,6 +10,7 @@ In order to run this application, you will need the following:
 To build and run the application, follow these steps:
 
 - Navigate to the base directory for this repository.
+- Run `composer install`.
 - Run `npm install && npm run build`.
 - Run `composer run dev`.
 
