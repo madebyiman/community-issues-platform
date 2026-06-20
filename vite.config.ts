@@ -28,4 +28,22 @@ export default defineConfig({
             formVariants: true,
         }),
     ],
+    build: {
+        rolldownOptions: {
+            output: {
+                codeSplitting: {
+                    groups: [
+                        {
+                            name: 'react',
+                            test: /node_modules\/(react|react-dom|scheduler)\//,
+                        },
+                        {
+                            name: 'vendor',
+                            test: /node_modules\//,
+                        },
+                    ],
+                },
+            },
+        },
+    },
 });
